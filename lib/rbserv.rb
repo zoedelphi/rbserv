@@ -11,7 +11,7 @@ listener.setsockopt Socket::SOL_SOCKET, Socket::SO_REUSEADDR, 1
 listener.bind Addrinfo.tcp HOST, PORT
 listener.listen 1
 
-puts("Serving HTTP on port #{PORT} ...")
+puts "Serving HTTP on port #{PORT} ..."
 loop do
   connection, address = listener.accept
   request_data = connection.recvfrom 1024
